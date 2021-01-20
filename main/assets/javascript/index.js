@@ -1,4 +1,4 @@
-//inde
+
 var highscoreBtn = document.querySelector("#scores");
 
 highscoreBtn.addEventListener("click", function() {
