@@ -10,6 +10,10 @@ highscoreBtn.addEventListener("click", function() {
 var startBtn = document.querySelector("#startBtn");
 var title = document.querySelector("#title");
 var info = document.querySelector("#info");
+var btn1 = document.querySelector("#choice1");
+var btn2 = document.querySelector("#choice2");
+var btn3 = document.querySelector("#choice3");
+var btn4 = document.querySelector("#choice4");
 
 var questionsAnswers = [
 
