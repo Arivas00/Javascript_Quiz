@@ -7,4 +7,16 @@ highscoreBtn.addEventListener("click", function() {
 
 })
 
+var startBtn = document.querySelector("#startBtn");
+var title = document.querySelector("#title");
+var info = document.querySelector("#info");
 
+function startQuiz() {
+
+    title.remove();
+    info.remove();
+    startBtn.remove();
+
+}
+
+startBtn.addEventListener("click", startQuiz);
