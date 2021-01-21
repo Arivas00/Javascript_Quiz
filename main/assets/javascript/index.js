@@ -10,10 +10,14 @@ highscoreBtn.addEventListener("click", function() {
 var startBtn = document.querySelector("#startBtn");
 var title = document.querySelector("#title");
 var info = document.querySelector("#info");
+var question = document.querySelector("#question");
 var btn1 = document.querySelector("#choice1");
 var btn2 = document.querySelector("#choice2");
 var btn3 = document.querySelector("#choice3");
 var btn4 = document.querySelector("#choice4");
+var choices = document.querySelector(".choices");
+
+var index = 0;
 
 var questionsAnswers = [
 
@@ -65,6 +69,44 @@ function startQuiz() {
     info.remove();
     startBtn.remove();
 
+    question.textContent =questionsAnswers[index].question
+    btn1.textContent = questionsAnswers[index].choice1
+    btn2.textContent = questionsAnswers[index].choice2
+    btn3.textContent = questionsAnswers[index].choice3
+    btn4.textContent = questionsAnswers[index].choice4
+
 }
 
 startBtn.addEventListener("click", startQuiz);
+
+choices.addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    if (event.target.matches("button")) {
+
+        var userAnswer = event.target.getAttribute("id");
+
+        if (userAnswer === questionsAnswers[index].correct) {
+
+    
+            index++;
+        
+        }
+
+        else {
+            
+            
+            index++;
+
+        }
+
+          
+        question.textContent = questionsAnswers[index].question;
+        btn1.textContent = questionsAnswers[index].choice1
+        btn2.textContent = questionsAnswers[index].choice2
+        btn3.textContent = questionsAnswers[index].choice3
+        btn4.textContent = questionsAnswers[index].choice4
+
+    }
+});
